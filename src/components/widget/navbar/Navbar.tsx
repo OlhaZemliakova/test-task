@@ -6,7 +6,7 @@ import { useHistory } from 'react-router';
 import Logo from 'images/fedd_logo.png'
 import Doggy from 'images/doggy.png'
 
-import { SmallHeading } from 'mixins/Font';
+import { SmallHeading } from 'Mixins/Font';
 
 type NavbarPropsType = {};
 
@@ -19,10 +19,9 @@ const Navbar = ({}: NavbarPropsType) => {
     <NavbarWrapper>
       <NavbarInnerWrapper>
         <NavbarLogoWrapper src={Logo} />
-        
         <NavbarProfilePill>
           <NavbarProfileWrapper src={Doggy} />
-          <SmallHeading textAlign='flex-start'>
+          <SmallHeading $bold textAlign='flex-start'>
             Billy
           </SmallHeading>
         </NavbarProfilePill>

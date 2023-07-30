@@ -27,8 +27,16 @@ export const NavbarInnerWrapper = styled.div`
 `;
 
 export const NavbarLogoWrapper = styled.img`
-  height: 35px;
-  width: auto;
+  max-width: 84px;
+  width: 100%;
+  height: auto;
+
+  ${breakpoint('tablet')`
+  max-width: 100px;
+`}
+  ${breakpoint('desktop')`
+    max-width: 144px;
+  `}
 `
 export const NavbarProfileWrapper = styled.img`
   height: 30px;
