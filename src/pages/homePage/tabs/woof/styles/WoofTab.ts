@@ -4,11 +4,18 @@ import { LargeText } from 'Mixins/Font';
 import { Button } from 'pages/homePage/styles/HomePage';
 import theme from 'GlobalTheme';
 
+export const WoofTabWrapper = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+
 export const WoofTabSubtitle = styled(LargeText)`
     text-align: center;
     font-style: normal;
     font-size: 20px;
     font-weight: 800;
+    margin-bottom: 35%;
 
     ${breakpoint('desktop')`
     font-size: 24px;
