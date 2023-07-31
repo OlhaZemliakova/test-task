@@ -1,7 +1,15 @@
 import React from "react";
 import useGetAccountQuery from "graphql/generated/queries/getAccountQuery";
-import { AccountTabWrapper, AccountTabImageWrapper, AccountTabLabel, CurrencyLabel } from './styles/AccountTab';
-import { LargeHeading, SmallHeading, SmallText, HugeText } from "Mixins/Font";
+import {
+  AccountTabWrapper,
+  AccountTabImageWrapper,
+  AccountTabLabel,
+  CurrencyLabel,
+  AccountTabSubtitle,
+  AccountBalanceText,
+  AccountStatus,
+  AccountTabLabelText
+} from './styles/AccountTab';
 import DoggyDollar from 'images/doggy_dollar.png';
 
 export type AccountTabProps = {}
@@ -19,23 +27,23 @@ export const AccountTab = ({ }: AccountTabProps) => {
 
   return (
     <AccountTabWrapper>
-      <LargeHeading $bold marginBottom="8px" textAlign="center">
+      <AccountTabSubtitle>
         Your current account balance is
-      </LargeHeading>
+      </AccountTabSubtitle>
       <AccountTabImageWrapper src={DoggyDollar} />
-      <HugeText $bold color="#99C82D">
+      <AccountBalanceText>
         $D {account.balance}
-      </HugeText>
+      </AccountBalanceText>
       <CurrencyLabel>
         {account.currency}
       </CurrencyLabel>
-      <SmallText marginBottom="15px">
+      <AccountStatus>
         Account status
-      </SmallText>
+      </AccountStatus>
       <AccountTabLabel>
-        <SmallText $bold color="#99C82D">
+        <AccountTabLabelText>
           {account.status}
-        </SmallText>
+        </AccountTabLabelText>
       </AccountTabLabel>
     </AccountTabWrapper>
   )

@@ -1,9 +1,8 @@
+import React from "react"
 import { useApolloClient } from "@apollo/client";
 import { useToast } from "components/widget/toast/Toast";
 import sendWoofMutation from "graphql/generated/mutations/woofMutation";
-import { LargeHeading } from "Mixins/Font";
-import { Button } from "./styles/WoofTab";
-import React from "react"
+import { WoofButton, WoofTabSubtitle } from "./styles/WoofTab";
 
 export type WoofTabProps = {}
 
@@ -24,10 +23,10 @@ export const WoofTab = ({ }: WoofTabProps) => {
 
   return (
     <>
-      <LargeHeading $bold marginBottom="100px">
+      <WoofTabSubtitle>
         Woof
-      </LargeHeading>
-      <Button onClick={() => onWoof()}>Click here to woof</Button>
+      </WoofTabSubtitle>
+      <WoofButton onClick={() => onWoof()}>Click here to woof</WoofButton>
     </>
   )
 }

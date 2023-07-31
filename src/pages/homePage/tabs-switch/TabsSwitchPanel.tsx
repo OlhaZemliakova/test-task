@@ -9,32 +9,32 @@ import {
   IconTitle
 } from './styles/TabsSwitchPanel';
 import { TABS } from "../homePageState";
-import theme from "../../../GlobalTheme";
+import theme from "GlobalTheme";
 
 const mappedTabs = {
   [TABS.ACCOUNT_TAB]: {
     img: AccountIcon,
     title: 'Account',
-    backgroundColor: theme.colours.primary.light,
-    activeSvgColor: '#000000',
-    activeBorderColor: '#000000',
-    activeTitleColor: '#000000',
+    backgroundColor: theme.colours.primary.main,
+    activeSvgColor: theme.colours.black,
+    activeBorderColor: theme.colours.neutral.dark,
+    activeTitleColor: theme.colours.black,
   },
   [TABS.REWARDS_TAB]: {
     img: RewardsIcon,
     title: 'Rewards',
     backgroundColor: theme.colours.secondary.main,
-    activeSvgColor: '#000000',
-    activeBorderColor: '#000000',
-    activeTitleColor: '#000000',
+    activeSvgColor: theme.colours.black,
+    activeBorderColor: theme.colours.neutral.dark,
+    activeTitleColor: theme.colours.black,
   },
   [TABS.WOOF_TAB]: {
     img: WoofIcon,
     title: 'Woof',
-    backgroundColor: '#0F1B2D',
-    activeSvgColor: '#0F1B2D',
-    activeBorderColor: '#E9C4D2',
-    activeTitleColor: '#FFFFFF',
+    backgroundColor: theme.colours.neutral.dark,
+    activeSvgColor: theme.colours.neutral.dark,
+    activeBorderColor: theme.colours.secondary.light,
+    activeTitleColor: theme.colours.white,
   }
 };
 

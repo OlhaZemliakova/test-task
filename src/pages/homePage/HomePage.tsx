@@ -1,6 +1,5 @@
 import React from "react";
-import { HomePageTabWrapper, HomePageWrapper, Button } from "./styles/HomePage";
-import { LargeHeading, LargeText, SmallHeading } from "Mixins/Font";
+import { HomePageTabWrapper, HomePageWrapper, Button, HomePageTitle } from "./styles/HomePage";
 import Spacer from "components/position/Spacer";
 import PageBackground from "pagesShared/Background";
 import { useHomePageState, TABS } from './homePageState';
@@ -37,9 +36,9 @@ const HomePage = () => {
   return (
     <PageBackground>
       <Spacer height={24} />
-      <LargeText $bold alignSelf="flex-start" textAlign="left" marginBottom="18px">
+      <HomePageTitle>
         Welcome back, Billy
-      </LargeText>
+      </HomePageTitle>
       <TabsSwitchPanel
         tabs={TABS}
         activeTab={state.currTab}

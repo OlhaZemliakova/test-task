@@ -1,3 +1,4 @@
+import { SmallHeading } from 'Mixins/Font';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 
@@ -18,6 +19,8 @@ export const NavbarInnerWrapper = styled.div`
   padding-top: 15px;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
+  
   ${breakpoint('mobile')`
     max-width: 350px;
   `}
@@ -55,3 +58,12 @@ export const NavbarProfilePill = styled.div`
   border-radius: 50px;
   padding: 2px 25px 2px 5px;
 `
+
+export const NavbarHeading = styled(SmallHeading)`
+  font-weight: 700;
+
+  ${breakpoint('desktop')`
+    font-weight: 800;
+    font-size: 20px;
+  `}
+`;
