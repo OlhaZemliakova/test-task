@@ -27,7 +27,7 @@ const Navbar = ({ }: NavbarPropsType) => {
         <NavbarLogoWrapper src={Logo} />
         <NavbarProfilePill>
           <NavbarProfileWrapper src={Doggy} />
-          <NavbarHeading textAlign='flex-start'>
+          <NavbarHeading>
             Billy
           </NavbarHeading>
         </NavbarProfilePill>

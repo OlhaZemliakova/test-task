@@ -1,4 +1,4 @@
-import { SmallText, MediumText, LargeText, HugeText } from 'Mixins/Font';
+import { MediumText, LargeText, LargeFont, SmallHeading, StandardFont } from 'Mixins/Font';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import theme from 'GlobalTheme';
@@ -17,7 +17,7 @@ export const AccountTabSubtitle = styled(LargeText)`
   margin-bottom: 12px;
   font-size: 20px;
   font-weight: 800;
-  max-width: 285px;
+  max-width: 280px;
   width: 100%;
 
   ${breakpoint('desktop')`
@@ -40,21 +40,22 @@ export const AccountTabImageWrapper = styled.img`
   `}
 `;
 
-export const AccountBalanceText = styled(HugeText)`
+export const AccountBalanceText = styled(LargeFont)`
   color: ${theme.colours.primary.dark};
-  font-weight: 900;
 `;
 
 export const CurrencyLabel = styled(MediumText)`
 margin-bottom: 23px;
+
 ${breakpoint('desktop')`
   margin-bottom: 15px;
   `}
 `;
 
-export const AccountStatus = styled(SmallText)`
+export const AccountStatus = styled(SmallHeading)`
   font-weight: 500;
   margin-bottom: 7px;
+  font-family: ${StandardFont};
 
     ${breakpoint('desktop')`
       margin-bottom: 15px;
@@ -70,7 +71,8 @@ export const AccountTabLabel = styled.div`
   text-align: center;
 `;
 
-export const AccountTabLabelText = styled(SmallText)`
+export const AccountTabLabelText = styled(SmallHeading)`
   color: ${theme.colours.primary.dark};
   font-weight: 700;
+  font-family: ${StandardFont};
 `;

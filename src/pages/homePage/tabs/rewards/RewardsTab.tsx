@@ -1,7 +1,7 @@
-import React from "react"
-import { SmallText } from "Mixins/Font";
+import React from "react";
 import useGetRewardsQuery from "graphql/generated/queries/getRewardsQuery";
 import {
+  RewardsTabWrapper,
   RewardsTabImage,
   RewardsTabSubtitle,
   RewardsBones,
@@ -24,7 +24,7 @@ export const RewardsTab = ({ }: RewardsTabProps) => {
   }
 
   return (
-    <>
+    <RewardsTabWrapper>
       <RewardsTabSubtitle>
         Your rewards
       </RewardsTabSubtitle>
@@ -35,6 +35,6 @@ export const RewardsTab = ({ }: RewardsTabProps) => {
       <RewardsDescription>
         You’ll earn a bone every time you achieve a “good boy” status.
       </RewardsDescription>
-    </>
+    </RewardsTabWrapper>
   )
 }

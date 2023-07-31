@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import theme from "GlobalTheme";
-import { SmallText } from 'Mixins/Font';
+import { SmallHeading, StandardFont } from 'Mixins/Font';
 
 export const TabsSwitchInner = styled.div<{
   marginBottom?: string;
@@ -42,7 +42,8 @@ export const WrapperIcon = styled.div`
   justify-content: center;
 `;
 
-export const IconTitle = styled(SmallText)<{ isActive: boolean, activeTitleColor: string }>`
+export const IconTitle = styled(SmallHeading)<{ isActive: boolean, activeTitleColor: string }>`
 color: ${({ isActive, activeTitleColor }) => isActive ? activeTitleColor : theme.colours.white};
   font-weight: 700;
+  font-family: ${StandardFont};
 `;

@@ -1,5 +1,6 @@
 import theme from 'GlobalTheme';
-import { DefaultFont, LargeText } from 'Mixins/Font';
+import { OutlineButton } from 'Mixins/Button';
+import { LargeText, StandardFont } from 'Mixins/Font';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { optional } from 'utils/styledComponents';
@@ -55,22 +56,6 @@ export const HomePageTitle = styled(LargeText)`
   `}
 `;
 
-export const Button = styled.button<{
-  textAlign?: string;
-  alignSelf?: string;
-  color?: string;
-}>`
-  display: block;
-  color: ${theme.colours.neutral.dark};
-  font-family: ${DefaultFont};
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;
-  border: 3px solid ${theme.colours.black};
-  border-radius: 65px;
-  padding: 15px 41px;
-  max-width: 350px;
-  width: 100%;
-  cursor: poiner;
+export const LogoutButton = styled(OutlineButton)`
+  
 `;

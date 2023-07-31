@@ -1,7 +1,16 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-import { LargeText, HugeText, SmallText } from 'Mixins/Font';
+import { LargeText, LargeFont, SmallHeading, StandardFont } from 'Mixins/Font';
 import theme from 'GlobalTheme';
+
+export const RewardsTabWrapper = styled(LargeText)`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    width: 100%;
+`;
 
 export const RewardsTabSubtitle = styled(LargeText)`
     text-align: center;
@@ -24,17 +33,15 @@ export const RewardsTabImage = styled.img`
     margin-bottom: 2px;
 `;
 
-export const RewardsBones = styled(HugeText)`
+export const RewardsBones = styled(LargeFont)`
     color: ${theme.colours.secondary.dark};
-    font-weight: 900;
     margin-bottom: 18px;
 `;
 
-export const RewardsDescription = styled(SmallText)`
+export const RewardsDescription = styled(SmallHeading)`
+    font-family: ${StandardFont};
     font-weight: 500;
     text-align: center;
-    max-width: 303px;
-    width: 100%;
     margin-bottom: 12px;
 
     ${breakpoint('desktop')`

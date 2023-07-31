@@ -61,6 +61,7 @@ export const NavbarProfilePill = styled.div`
 
 export const NavbarHeading = styled(SmallHeading)`
   font-weight: 700;
+  text-align: flex-start;
 
   ${breakpoint('desktop')`
     font-weight: 800;
