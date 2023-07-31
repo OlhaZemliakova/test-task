@@ -2,7 +2,11 @@ import theme from "GlobalTheme";
 import styled from "styled-components";
 import { StandardFont } from "./Font";
 
-export const Button = styled.button`
+export const Button = styled.button<{ $outline?: boolean; }>`
+    background: ${props => props.$outline ? "transparent" : theme.colours.neutral.dark};
+    border-color: ${props => props.$outline ? theme.colours.black : theme.colours.neutral.dark};
+    color: ${props => props.$outline ? theme.colours.neutral.dark : theme.colours.white};
+    border: 3px solid;
     display: block;
     font-family: ${StandardFont};
     font-size: 20px;
@@ -14,15 +18,4 @@ export const Button = styled.button`
     max-width: 350px;
     width: 100%;
     cursor: poiner;
-`;
-
-export const PrimaryButton = styled(Button)`
-    background: ${theme.colours.neutral.dark};
-    border: 3px solid ${theme.colours.neutral.dark};
-    color: ${theme.colours.white};
-`;
-
-export const OutlineButton = styled(Button)`
-    border: 3px solid ${theme.colours.black};
-    color: ${theme.colours.neutral.dark};
 `;

@@ -1,4 +1,4 @@
-import { MediumText, LargeText, LargeFont, SmallHeading, StandardFont } from 'Mixins/Font';
+import { LargeText, SmallHeading, StandardFont, LargeHeading } from 'Mixins/Font';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import theme from 'GlobalTheme';
@@ -40,12 +40,21 @@ export const AccountTabImageWrapper = styled.img`
   `}
 `;
 
-export const AccountBalanceText = styled(LargeFont)`
+export const AccountBalanceText = styled(LargeHeading)`
+  text-align: center;
+  font-family: ${StandardFont};
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 50px;
+  letter-spacing: -0.9px;
   color: ${theme.colours.primary.dark};
 `;
 
-export const CurrencyLabel = styled(MediumText)`
-margin-bottom: 23px;
+export const CurrencyLabel = styled(SmallHeading)`
+  margin-bottom: 23px;
+  font-family: ${StandardFont};
+  font-size: 20px;
+  font-weight: 500;
 
 ${breakpoint('desktop')`
   margin-bottom: 15px;

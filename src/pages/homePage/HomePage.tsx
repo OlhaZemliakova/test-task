@@ -7,7 +7,7 @@ import { AccountTab } from "./tabs/account/AccountTab";
 import { RewardsTab } from "./tabs/rewards/RewardsTab";
 import { WoofTab } from "./tabs/woof/WoofTab";
 import TabsSwitchPanel from "./tabs-switch/TabsSwitchPanel";
-import { LogoutButton } from "./styles/HomePage";
+import { Button } from "Mixins/Button";
 
 const HomePage = () => {
 
@@ -49,9 +49,9 @@ const HomePage = () => {
       <HomePageTabWrapper>
         {tabs[state.currTab]}
       </HomePageTabWrapper>
-      <LogoutButton>
+      <Button $outline>
         Logout
-      </LogoutButton>
+      </Button>
     </PageBackground>
   )
 

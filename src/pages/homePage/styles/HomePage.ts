@@ -55,7 +55,3 @@ export const HomePageTitle = styled(LargeText)`
     margin-top: 18px;
   `}
 `;
-
-export const LogoutButton = styled(OutlineButton)`
-  
-`;

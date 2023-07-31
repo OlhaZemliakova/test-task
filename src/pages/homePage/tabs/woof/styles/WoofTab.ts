@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { LargeText } from 'Mixins/Font';
 import theme from 'GlobalTheme';
-import { PrimaryButton } from 'Mixins/Button';
+import { Button } from 'Mixins/Button';
 
 export const WoofTabWrapper = styled.div`
   height: 100%;
@@ -28,7 +28,7 @@ export const WoofTabSubtitle = styled(LargeText)`
 `}
 `;
 
-export const WoofButton = styled(PrimaryButton)`
+export const WoofButton = styled(Button)`
   max-width: 300px;
   width: 100%;
   padding: 13px 35px;

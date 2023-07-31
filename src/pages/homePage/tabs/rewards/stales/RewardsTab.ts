@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-import { LargeText, LargeFont, SmallHeading, StandardFont } from 'Mixins/Font';
+import { LargeText, SmallHeading, StandardFont, LargeHeading } from 'Mixins/Font';
 import theme from 'GlobalTheme';
 
 export const RewardsTabWrapper = styled(LargeText)`
@@ -33,8 +33,14 @@ export const RewardsTabImage = styled.img`
     margin-bottom: 2px;
 `;
 
-export const RewardsBones = styled(LargeFont)`
+export const RewardsBones = styled(LargeHeading)`
     color: ${theme.colours.secondary.dark};
+    text-align: center;
+    font-family: ${StandardFont};
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 50px;
+    letter-spacing: -0.9px;
     margin-bottom: 18px;
 `;
 
