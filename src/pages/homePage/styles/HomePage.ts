@@ -1,6 +1,5 @@
 import theme from 'GlobalTheme';
-import { OutlineButton } from 'Mixins/Button';
-import { LargeText, StandardFont } from 'Mixins/Font';
+import { LargeText } from 'Mixins/Font';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { optional } from 'utils/styledComponents';
