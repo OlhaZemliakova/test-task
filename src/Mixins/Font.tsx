@@ -76,7 +76,6 @@ export const LargeText = styled.div<{
   -webkit-text-size-adjust:100%;  
   -moz-text-size-adjust:100%; 
   -ms-text-size-adjust:100%;
-`
+`;
 
 // TODO: Define all required text fonts here
-

@@ -1,4 +1,5 @@
-
+import theme from 'GlobalTheme';
+import { LargeText } from 'Mixins/Font';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { optional } from 'utils/styledComponents';
@@ -20,20 +21,36 @@ export const HomePageTabWrapper = styled.div<{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: ${({theme}) => theme.colours.white};
+  background: ${({ theme }) => theme.colours.white};
   border-radius: 10px;
-  min-height: 60%;
+  min-height: 50%;
+  margin-bottom: 24px;
 
   ${breakpoint('mobile')`
     width: 100%;
     max-width: 350px;
-    padding: 24px 24px;
+    padding: 30px 25px 12px;
+    min-height: 41%;
+    margin-bottom: 70px;
   `}
 
   ${breakpoint('tablet')`
     width: 100%;
     max-width: 900px;
-    padding: 48px 24px;
+    padding-top: 17px;
+    padding-bottom: 27px;
+    min-height: 50%;
+    margin-bottom: 24px;
   `}
 
-`
+`;
+
+export const HomePageTitle = styled(LargeText)`
+  font-weight: 600;
+  margin-bottom: 11px;
+  align-self: flex-start;
+
+  ${breakpoint('desktop')`
+    margin-top: 18px;
+  `}
+`;

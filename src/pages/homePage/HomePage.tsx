@@ -1,12 +1,13 @@
 import React from "react";
-import { HomePageTabWrapper, HomePageWrapper } from "./styles/HomePage";
-import { LargeHeading, LargeText } from "mixins/Font";
+import { HomePageTabWrapper, HomePageWrapper, HomePageTitle } from "./styles/HomePage";
 import Spacer from "components/position/Spacer";
 import PageBackground from "pagesShared/Background";
 import { useHomePageState, TABS } from './homePageState';
-import { AccountTab } from "./tabs/AccountTab";
-import { RewardsTab } from "./tabs/RewardsTab";
-import { WoofTab } from "./tabs/WoofTab";
+import { AccountTab } from "./tabs/account/AccountTab";
+import { RewardsTab } from "./tabs/rewards/RewardsTab";
+import { WoofTab } from "./tabs/woof/WoofTab";
+import TabsSwitchPanel from "./tabs-switch/TabsSwitchPanel";
+import { Button } from "Mixins/Button";
 
 const HomePage = () => {
 
@@ -36,18 +37,21 @@ const HomePage = () => {
   return (
     <PageBackground>
       <Spacer height={24} />
-      <LargeText bold alignSelf="flex-start" textAlign="left" marginBottom="12px">
+      <HomePageTitle>
         Welcome back, Billy
-      </LargeText>
-      {
-        /**
-         * Add your implementation
-         */
-      }
+      </HomePageTitle>
+      <TabsSwitchPanel
+        tabs={TABS}
+        activeTab={state.currTab}
+        switchTab={switchTab}
+      />
       <Spacer height={24} />
       <HomePageTabWrapper>
         {tabs[state.currTab]}
       </HomePageTabWrapper>
+      <Button $outline>
+        Logout
+      </Button>
     </PageBackground>
   )
 
