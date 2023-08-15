@@ -1,13 +1,12 @@
 {
   "name": "web",
   "version": "1.0.0",
-  "description": "Nyble take-home exercise.",
+  "description": "Take-home exercise.",
   "scripts": {
     "start": "yarn web:dev",
     "web:dev": "webpack-dev-server --mode development --devtool inline-source-map --hot --display-error-details",
     "gql:gen": "cd ./scripts/graphql_gen && yarn run gqlgen"
   },
-  "author": "Fincentify inc. dba. Nyble",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "~7.2.2",

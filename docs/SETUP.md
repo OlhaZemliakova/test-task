@@ -1,8 +1,3 @@
-# Setting Up
-
-Front-end react app for Fincentify. 
-
-
 ### Development
 
 **Running Locally**
@@ -61,9 +56,6 @@ This will compile the react app into a production ready raw js, css, html
 files and serve them inside a container. 
 This step will be for manual testing and sanity check, actual production 
 containers will be built and pushed on the CI/CD pipeline.
-
-`docker run -p 8080:8080 registry.gitlab.com/fincentify/registry/web:local`
-You should be able to see your build on `http://0.0.0.0:8080`
 
 **Setting up Prettier**
 
